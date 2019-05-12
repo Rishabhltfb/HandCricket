@@ -77,7 +77,11 @@ function lose(userChoice,computerChoice){
       alert("OOLALA....It's a DRAW!!");
     }
     replay_div.style.display="block";
-		one_div.disabled=true;
+    		one_div.style.pointerEvents='none';
+		two_div.style.pointerEvents='none';
+		three_div.style.pointerEvents='none';
+		four_div.style.pointerEvents='none';
+		five_div.style.pointerEvents='none';
 
   }
 
