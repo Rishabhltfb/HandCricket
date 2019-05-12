@@ -81,8 +81,9 @@ span{
 	margin:1px 15px;
 	height:100px;
 	width:100px;
-  background-color: #fff;
+        background-color: #fff;
 	background-size:cover;
+	pointer-events: auto;
 }
 
 .choicei{
