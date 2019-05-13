@@ -47,6 +47,17 @@ function win(userChoice,computerChoice){
   	result_p.innerHTML=`${smallUserWord} hits${convertToWord(userChoice)} against ${smallCompWord}${convertToWord(computerChoice)} .Bingo !`;
 
   }
+  if(user2Score>user1Score){
+  	  last_p.innerHTML=`2nd USER WINS THE MATCH!!`;
+          alert("2nd user Win!!");
+          replay_div.style.display="block";
+		one_div.style.pointerEvents='none';
+		two_div.style.pointerEvents='none';
+		three_div.style.pointerEvents='none';
+		four_div.style.pointerEvents='none';
+		five_div.style.pointerEvents='none';
+
+  }
 
 }
 
@@ -69,9 +80,6 @@ function lose(userChoice,computerChoice){
     if(user1Score>user2Score){
       last_p.innerHTML=`1st USER WINS THE MATCH!!`;
       alert("1st user Win!!");
-    }else if (user2Score>user1Score) {
-      last_p.innerHTML=`2nd USER WINS THE MATCH!!`;
-      alert("2nd user Win!!");
     }else{
       last_p.innerHTML=`OOLALA.... It's a DRAW!!`;
       alert("OOLALA....It's a DRAW!!");
