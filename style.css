@@ -178,3 +178,50 @@ p{
 .disappear:hover{
 	cursor: pointer;
 }
+
+.popup2{
+	background-color: #1e1f1a;
+	position:absolute;
+	top:20%;
+	left:10%;
+	border-radius: 15px;
+	height: 70vh;
+	padding:20px;
+	width:80%;
+	display:none;
+	text-align: center;
+	color: #fff;
+}
+
+.main-msg{
+	color: red;
+	font-family: 'Monoton', cursive;
+}
+
+.parra-msg{
+	margin-top: 20px;
+}
+
+.popup_parra_msg1{
+	margin: 10px;
+}
+
+.popup_parra_msg2{
+	margin: 10px;
+}
+
+.disappear2{
+	background-color: #fff;
+	padding:10px;
+	color:#1e1f1a;
+	font-family: 'Monoton', cursive;
+	font-weight: bold;
+	border:1px solid #1e1f1a;
+	height:50px;
+	width:100px;
+	left:50%;
+	transform:translate(-50px,-25px);
+	bottom:-35%;
+	border-radius:10px;
+	position: relative;	
+}

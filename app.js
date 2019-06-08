@@ -14,6 +14,11 @@ const five_div= document.getElementById("choice5");
 const replay_div= document.querySelector(".replay");
 const intro_div= document.querySelector(".intro");
 const disappear_div= document.querySelector(".disappear");
+const disappear2_div= document.querySelector(".disappear2");
+const popup_div= document.querySelector(".popup2");
+const main_msg= document.querySelector(".main-msg");
+const popup_parra_msg1= document.querySelector(".popup_parra_msg1");
+const popup_parra_msg2= document.querySelector(".popup_parra_msg2");
 
 
 
@@ -51,8 +56,11 @@ function win(userChoice,computerChoice){
 
   }
   if(user2Score>user1Score){
-  	  last_p.innerHTML=`2nd USER WINS THE MATCH!!`;
-      alert("2nd user Win!!");
+      last_p.innerHTML=`2nd USER WINS THE MATCH!!`;
+      popup_div.style.display="block";
+      main_msg.innerHTML=`Congo!!`;
+      popup_parra_msg1.innerHTML=`Second Player Hits ${user2Score} runs`;
+      popup_parra_msg2.innerHTML=`Second Player Wins!`;
       replay_div.style.display="block";
 		one_div.style.pointerEvents='none';
 		two_div.style.pointerEvents='none';
@@ -71,7 +79,8 @@ function lose(userChoice,computerChoice){
   	const smallUserWord="user1".fontsize(2).sub();
   	const smallCompWord="computer".fontsize(2).sub();
   	result_p.innerHTML=`${smallUserWord}${convertToWord(userChoice)} loses to ${smallCompWord}${convertToWord(computerChoice)} .<span color="red">OUT !</span>`;
-    alert("OUT!! Next Player Turn");
+    popup_div.style.display="block";
+    popup_parra_msg1.innerHTML=`First Player is Out at ${user1Score} runs`;
     loose=1;
 
   }else{
@@ -79,13 +88,17 @@ function lose(userChoice,computerChoice){
   	const smallUserWord="user2".fontsize(2).sub();
   	const smallCompWord="computer".fontsize(2).sub();
   	result_p.innerHTML=`${smallUserWord}${convertToWord(userChoice)} loses to ${smallCompWord}${convertToWord(computerChoice)} .<span color="red">OUT !</span>`;
-    alert("OUT!! GAME END ");
+    popup_div.style.display="block";
+    popup_parra_msg1.innerHTML=`Second Player is Out at ${user2Score} runs`;
+    popup_parra_msg2.innerHTML=`Let's see ScoreBoard!`;      
     if(user1Score>user2Score){
       last_p.innerHTML=`1st USER WINS THE MATCH!!`;
-      alert("1st user Win!!");
+      popup_parra_msg1.innerHTML=`First Player Wins by ${user1Score - user2Score} runs`;
+      popup_parra_msg2.innerHTML=`Congratulations!!`;
     }else{
       last_p.innerHTML=`OOLALA.... It's a DRAW!!`;
-      alert("OOLALA....It's a DRAW!!");
+      popup_parra_msg1.innerHTML=`Both Players Score ${user1Score} runs`;
+      popup_parra_msg2.innerHTML=`OLALA It's a Draw!!`;
     }
     replay_div.style.display="block";
 		one_div.style.pointerEvents='none';
@@ -122,6 +135,10 @@ function reset(){
     user2Score_span.innerHTML=user2Score;
     result_p.innerHTML=`HIT YOUR SHOT !!`;
     last_p.innerHTML=`Make your Move.`;
+    main_msg.innerHTML=`OUT!!`;
+    popup_parra_msg1.innerHTML=`First Player is Out.`;
+    popup_parra_msg2.innerHTML=`Next Player Turn...`;  
+
 }
 
 
@@ -146,6 +163,9 @@ function main(){
   })
   disappear_div.addEventListener('click',function(){
     intro_div.style.display="none";
+  })
+  disappear2_div.addEventListener('click',function(){
+    popup_div.style.display="none";
   })
 }
 
