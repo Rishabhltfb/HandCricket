@@ -52,13 +52,8 @@ function win(userChoice,computerChoice){
   }
   if(user2Score>user1Score){
   	  last_p.innerHTML=`2nd USER WINS THE MATCH!!`;
-<<<<<<< HEAD
       alert("2nd user Win!!");
       replay_div.style.display="block";
-=======
-          alert("2nd user Win!!");
-          replay_div.style.display="block";
->>>>>>> 75084dff824b3c480ec91b7aec4e00e4c5e9227d
 		one_div.style.pointerEvents='none';
 		two_div.style.pointerEvents='none';
 		three_div.style.pointerEvents='none';
@@ -93,11 +88,7 @@ function lose(userChoice,computerChoice){
       alert("OOLALA....It's a DRAW!!");
     }
     replay_div.style.display="block";
-<<<<<<< HEAD
 		one_div.style.pointerEvents='none';
-=======
-    		one_div.style.pointerEvents='none';
->>>>>>> 75084dff824b3c480ec91b7aec4e00e4c5e9227d
 		two_div.style.pointerEvents='none';
 		three_div.style.pointerEvents='none';
 		four_div.style.pointerEvents='none';
