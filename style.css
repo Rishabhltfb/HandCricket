@@ -6,6 +6,7 @@
 
 body{
 	background-color: #25272E;
+	overflow-x: hidden;
 }
 
 header{
@@ -81,8 +82,9 @@ span{
 	margin:1px 15px;
 	height:100px;
 	width:100px;
-  background-color: #fff;
+    background-color: #fff;
 	background-size:cover;
+	pointer-events: auto;
 }
 
 .choicei{
@@ -119,4 +121,60 @@ p{
 .replay:hover{
 	cursor: pointer;
 	transform: scale(1.2);
+}
+.intro{
+	background: #bdc3c7;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	top:0;	
+	display:block;
+	
+}
+
+.popup{
+	background-color: #1e1f1a;
+	position:absolute;
+	top:20%;
+	left:10%;
+	border-radius: 15px;
+	height: 60vh;
+	padding:20px;
+	width:80%;
+	text-align: center;
+	color: yellowgreen;	
+}
+
+.quick_intro{
+	color: red;
+}
+.popup_head{
+	color:#fff;
+}
+.parra{
+		margin-top:50px;
+}
+.popup_parra{
+	color:  yellowgreen;
+	font-size:15px;
+	margin:20px;
+}
+.disappear{
+	background-color: #fff;
+	padding:10px;
+	color:#1e1f1a;
+	font-weight: bold;
+	border:1px solid #1e1f1a;
+	height:50px;
+	width:30%;
+	left:35%;
+	bottom:-20%;
+	border-radius:10px;
+	position: relative;
+	
+}
+.disappear:hover{
+	cursor: pointer;
 }

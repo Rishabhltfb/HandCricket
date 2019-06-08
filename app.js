@@ -12,6 +12,9 @@ const three_div= document.getElementById("choice3");
 const four_div= document.getElementById("choice4");
 const five_div= document.getElementById("choice5");
 const replay_div= document.querySelector(".replay");
+const intro_div= document.querySelector(".intro");
+const disappear_div= document.querySelector(".disappear");
+
 
 
 function getComputerChoice(){
@@ -47,6 +50,17 @@ function win(userChoice,computerChoice){
   	result_p.innerHTML=`${smallUserWord} hits${convertToWord(userChoice)} against ${smallCompWord}${convertToWord(computerChoice)} .Bingo !`;
 
   }
+  if(user2Score>user1Score){
+  	  last_p.innerHTML=`2nd USER WINS THE MATCH!!`;
+      alert("2nd user Win!!");
+      replay_div.style.display="block";
+		one_div.style.pointerEvents='none';
+		two_div.style.pointerEvents='none';
+		three_div.style.pointerEvents='none';
+		four_div.style.pointerEvents='none';
+		five_div.style.pointerEvents='none';
+
+  }
 
 }
 
@@ -69,15 +83,16 @@ function lose(userChoice,computerChoice){
     if(user1Score>user2Score){
       last_p.innerHTML=`1st USER WINS THE MATCH!!`;
       alert("1st user Win!!");
-    }else if (user2Score>user1Score) {
-      last_p.innerHTML=`2nd USER WINS THE MATCH!!`;
-      alert("2nd user Win!!");
     }else{
       last_p.innerHTML=`OOLALA.... It's a DRAW!!`;
       alert("OOLALA....It's a DRAW!!");
     }
     replay_div.style.display="block";
-		one_div.disabled=true;
+		one_div.style.pointerEvents='none';
+		two_div.style.pointerEvents='none';
+		three_div.style.pointerEvents='none';
+		four_div.style.pointerEvents='none';
+		five_div.style.pointerEvents='none';
 
   }
 
@@ -91,6 +106,22 @@ function game(userChoice){
     win(userChoice,computerChoice);
   }
 
+}
+
+function reset(){
+    replay_div.style.display="none";
+		one_div.style.pointerEvents='auto';
+		two_div.style.pointerEvents='auto';
+		three_div.style.pointerEvents='auto';
+		four_div.style.pointerEvents='auto';
+    five_div.style.pointerEvents='auto';
+    user1Score = 0;
+    user2Score = 0;
+    loose = 0;
+    user1Score_span.innerHTML=user1Score;
+    user2Score_span.innerHTML=user2Score;
+    result_p.innerHTML=`HIT YOUR SHOT !!`;
+    last_p.innerHTML=`Make your Move.`;
 }
 
 
@@ -111,7 +142,10 @@ function main(){
   game(6);
         })
   replay_div.addEventListener('click',function(){
-    document.location.reload();
+    reset();
+  })
+  disappear_div.addEventListener('click',function(){
+    intro_div.style.display="none";
   })
 }
 
