@@ -82,7 +82,11 @@ span{
 	margin:1px 15px;
 	height:100px;
 	width:100px;
+<<<<<<< HEAD
     background-color: #fff;
+=======
+        background-color: #fff;
+>>>>>>> 75084dff824b3c480ec91b7aec4e00e4c5e9227d
 	background-size:cover;
 	pointer-events: auto;
 }
